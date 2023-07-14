@@ -57,8 +57,11 @@ int main() {
 }
 ```
 
-In the `main()` function, we create an instance of the `Dog` class named `dog` with the name "Buddy" and age 3. We can then call the member functions `eat()`, `sleep()`, and `bark()` on the `dog` object, which are inherited from the `Animal` class and defined in the `Dog` class.
+In the `main()` function, we create an instance of the `Dog` class named `dog` with the name "Buddy" and age 3. 
 
-Inheritance allows for code reuse, as common properties and behaviors can be defined in a base class and inherited by multiple derived classes. It facilitates the concept of "is-a" relationship, where a derived class is considered to be a specialized version of the base class.
+We can then call the member functions `eat()`, `sleep()`, and `bark()` on the `dog` object, which are inherited from the `Animal` class and defined in the `Dog` class.
 
-It's important to note that there are different access specifiers (`public`, `protected`, and `private`) that control the visibility of inherited members in the derived class. The `public` specifier allows inherited members to be accessed by objects of the derived class and from outside the class. The `protected` specifier allows inherited members to be accessed by objects of the derived class, but not from outside the class. The `private` specifier hides inherited members from objects of the derived class and from outside the class.
+It's important to note that there are different access specifiers (`public`, `protected`, and `private`) that control the visibility of inherited members in the derived class. 
+  - The `public` specifier allows inherited members to be accessed by objects of the derived class and from outside the class.
+  - The `protected` specifier allows inherited members to be accessed by objects of the derived class, but not from outside the class.
+  - The `private` specifier hides inherited members from objects of the derived class and from outside the class.
