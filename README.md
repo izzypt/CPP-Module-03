@@ -15,8 +15,14 @@ class  <derived_class_name> : <access-specifier> <base_class_name>
 {
         //body
 }
-
 ```
+
+  - ```derived_class_name```: name of the new class, which will inherit the base class
+  - ```access-specifier```: either of ```private```, ```public``` or ```protected```. If neither is specified, ```PRIVATE``` is taken as default
+  - ```base-class-name```: name of the base class
+
+    > Note: A derived class doesn’t inherit access to private data members. However, it does inherit a full parent object, which contains any private members which that class declares.
+
 Let's consider an example:
 
 ```cpp
