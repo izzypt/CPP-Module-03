@@ -8,6 +8,15 @@ _____________
 
 Inheritance is a fundamental concept in object-oriented programming that allows a class to inherit properties and behaviors from another class.
 
+Syntax: 
+
+```
+class  <derived_class_name> : <access-specifier> <base_class_name>
+{
+        //body
+}
+
+```
 Let's consider an example:
 
 ```cpp
