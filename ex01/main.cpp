@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:37:38 by simao             #+#    #+#             */
-/*   Updated: 2023/07/15 18:23:35 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/15 22:35:18 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int main(int argc, char **argv)
 {
-    ScavTrap simon("Simon");
+    ScavTrap robot("robot");
 
-    simon.attack("Medo");  
+    robot.attack("Tiago");
+    robot.takeDamage(10);  
 }
