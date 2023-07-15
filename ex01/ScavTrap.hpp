@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/15 15:37:38 by simao             #+#    #+#             */
-/*   Updated: 2023/07/15 17:45:50 by simao            ###   ########.fr       */
+/*   Created: 2023/07/15 17:36:31 by simao             #+#    #+#             */
+/*   Updated: 2023/07/15 19:22:21 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_H
+#define SCAVTRAP_H
+
+/* Libraries */
 #include "ClapTrap.hpp"
 
-int main(int argc, char **argv)
+/* Classes */
+class ScavTrap : public ClapTrap
 {
-    ClapTrap robot("Elvis");
-    ClapTrap *sam = new ClapTrap("Sam");
+	public:
+        ScavTrap(const std::string &name) : ClapTrap(name) {};
+        void            attack(const std::string &target);
+		bool            guardGate();
+};
 
-    robot.attack("dummy");
-    robot.takeDamage(3);
-    sam->attack("dummy");
-    sam->takeDamage(4);
+#endif
 
-    delete sam;
-}

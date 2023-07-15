@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:37:35 by simao             #+#    #+#             */
-/*   Updated: 2023/07/15 17:26:31 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/15 19:33:10 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 /* Classes */
 class ClapTrap
 {
-    private:
+    protected:
         std::string	name;
         int			HP;
         int			stamina;

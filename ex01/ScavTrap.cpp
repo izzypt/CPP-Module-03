@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/15 15:37:38 by simao             #+#    #+#             */
-/*   Updated: 2023/07/15 17:45:50 by simao            ###   ########.fr       */
+/*   Created: 2023/07/15 18:17:47 by simao             #+#    #+#             */
+/*   Updated: 2023/07/15 19:08:42 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-int main(int argc, char **argv)
+void ScavTrap::attack(const std::string& target)
 {
-    ClapTrap robot("Elvis");
-    ClapTrap *sam = new ClapTrap("Sam");
-
-    robot.attack("dummy");
-    robot.takeDamage(3);
-    sam->attack("dummy");
-    sam->takeDamage(4);
-
-    delete sam;
+    if (this->stamina == 0)
+    {
+        std::cout << "No stamina left to attack." << std::endl;
+        return;
+    }
+    this->stamina -= 1;
+    std::cout << "ScavTrap " << this->name << " attacks " << target << " and deals " << this->atk_dmg << " damage." << std::endl;
 }
