@@ -2,13 +2,13 @@
 
 ### Inheritance
 
+Inheritance is a fundamental concept in object-oriented programming that allows a class to inherit properties and behaviors from another class.
+
 Resources :
 - https://www.geeksforgeeks.org/inheritance-in-c/
 _____________
 
-Inheritance is a fundamental concept in object-oriented programming that allows a class to inherit properties and behaviors from another class.
-
-Syntax: 
+### Syntax: 
 
 ```
 class  <derived_class_name> : <access-specifier> <base_class_name>
@@ -181,3 +181,62 @@ The class specifiers determine the type of inheritance and access level between 
 Public inheritance is the most common form of inheritance used in C++ for modeling hierarchical relationships, while protected and private inheritance are used more sparingly for specific situations like access control or component reuse. 
 
 Always favor composition over inheritance when possible, as it often leads to more flexible and maintainable code.
+
+## Access to privste/public members
+
+When I say a member is "accessible from any part of the program, even outside the class," it means that the member can be accessed and used in any function or code block within the program, not just within the class where it is defined. Examples to illustrate this:
+
+```cpp
+class MyClass {
+public:
+    int publicVariable;
+
+    void publicFunction() {
+        std::cout << "This is a public function." << std::endl;
+    }
+};
+
+int main() {
+    MyClass obj;
+    obj.publicVariable = 42; // Accessing the public member variable outside the class.
+    obj.publicFunction();    // Calling the public member function outside the class.
+    return 0;
+}
+```
+
+- In this example, we have a class `MyClass` with a public member variable `publicVariable` and a public member function `publicFunction()`. 
+- Inside the `main()` function, we create an object `obj` of type `MyClass`, and then we can directly access and modify the `publicVariable` and call the `publicFunction()` on this object because they are marked as `public`. 
+- This is possible because the `public` members are accessible from any part of the program.
+
+Now, let's see what happens if we try to access private members from outside the class:
+
+```cpp
+class MyClass {
+private:
+    int privateVariable;
+
+public:
+    void setPrivateVariable(int value) {
+        privateVariable = value;
+    }
+
+    int getPrivateVariable() const {
+        return privateVariable;
+    }
+};
+
+int main() {
+    MyClass obj;
+    obj.privateVariable = 42; // Error: Cannot access private member variable outside the class.
+    obj.setPrivateVariable(42); // This is allowed, as we are using a public member function to set the private variable.
+    std::cout << obj.getPrivateVariable() << std::endl; // This is allowed, as we are using a public member function to access the private variable.
+    return 0;
+}
+```
+
+- In this example, we have a class `MyClass` with a private member variable `privateVariable`.
+- When we try to access `privateVariable` directly outside the class, it results in an error because private members are not accessible outside the class.
+- However, we can still access and modify the `privateVariable` using public member functions `setPrivateVariable()` and `getPrivateVariable()`.
+- This demonstrates how private members can be controlled and used through public member functions.
+
+Remember, the idea behind access specifiers is to control the visibility of members and to enforce good encapsulation and data hiding practices in your classes. Public members are accessible from anywhere, private members are only accessible within the class itself, and protected members are accessible by derived classes.
