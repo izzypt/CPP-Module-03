@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/15 17:36:31 by simao             #+#    #+#             */
-/*   Updated: 2023/07/17 17:55:37 by simao            ###   ########.fr       */
+/*   Created: 2023/07/15 15:37:35 by simao             #+#    #+#             */
+/*   Updated: 2023/07/15 19:33:10 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_H
-#define SCAVTRAP_H
+#ifndef CLAPTRAP_H
+#define CLAPTRAP_H
 
 /* Libraries */
-#include "ClapTrap.hpp"
+#include <iostream>
+#include <string>
 
 /* Classes */
-class ScavTrap : public ClapTrap
+class ClapTrap
 {
-    private :
-        bool            guardgate;
-	public:
-        ScavTrap(const std::string &name);
-        ~ScavTrap(void);
-        void            attack(const std::string &target);
-		bool            guardGate(void);
+    protected:
+        std::string	name;
+        int			HP;
+        int			stamina;
+		int			atk_dmg;
+    public:
+		ClapTrap(std::string name);
+		ClapTrap(const ClapTrap& obj);
+		~ClapTrap();
+		void		attack(const std::string& target);
+		void		takeDamage(unsigned int ammount);
+		void		beRepaired(unsigned int ammount);
 };
 
 #endif
-

@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:37:41 by simao             #+#    #+#             */
-/*   Updated: 2023/07/17 18:02:27 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/17 18:59:33 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ClapTrap::ClapTrap(const ClapTrap& obj)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called." << std::endl;
+    std::cout << "ClapTrap Destructor called." << std::endl;
 }
 
 		/*****************************/
