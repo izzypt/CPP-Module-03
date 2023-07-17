@@ -2,13 +2,13 @@
 
 ### Inheritance
 
+Inheritance is a fundamental concept in object-oriented programming that allows a class to inherit properties and behaviors from another class.
+
 Resources :
 - https://www.geeksforgeeks.org/inheritance-in-c/
 _____________
 
-Inheritance is a fundamental concept in object-oriented programming that allows a class to inherit properties and behaviors from another class.
-
-Syntax: 
+### Syntax: 
 
 ```
 class  <derived_class_name> : <access-specifier> <base_class_name>
